@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
   event.preventDefault(); 
 });
 
-var state = 1;
+var state = 0;
 var light = () => {
   state ++;
   if(1 == state%2){
