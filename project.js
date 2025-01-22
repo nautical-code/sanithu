@@ -27,7 +27,8 @@ function deviceMoved() {
   inter = setInterval(rot, 400); 
   setTimeout(() => {
     clearInterval(inter); 
-  }, 3000); // Rotate for 3 seconds (adjust as needed)
+  }, 3000); 
+  setMoveThreshold(10);
 }
 
 function rot() {
