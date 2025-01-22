@@ -22,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(0);
 
   // Rotate the scene to match device orientation
   rotateX(radians(rotationX)); 
