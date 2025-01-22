@@ -1,23 +1,33 @@
 * {
    box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+  cursor: url('curse.png'), auto;
+  
+}
 header {
-   background-color: #000000;
-   color: #fff;
+   background: linear-gradient(to right, hsla(40, 100%, 50%, 0.74), hsla(40, 100%, 50%, 0.5), rgba(0, 0, 0, 0.5), rgb(0, 0, 0)); 
+   -webkit-background-clip: text; 
+   -webkit-text-fill-color: transparent;
+   color: hsla(40, 100%, 50%, 0.74);
    text-shadow: 2px 2px 5px #ffffff00;
    text-align: center;
    padding: 1rem;
+   
+}
+header:hover {
+  color: transparent;
+  animation: glow 1s ease-in-out infinite alternate;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
 }
 h1 {
-   color: transparent; 
-   -webkit-animation: glow 1s ease-in-out infinite alternate;
-   -moz-animation: glow 1s ease-in-out infinite alternate;
-   animation: glow 1s ease-in-out infinite alternate;
    font-family: Shippori Mincho B1;
    font-size: 350%;
 }
 body {
-   background-color: rgb(5, 0, 20);
+   background-color: rgb(0, 0, 0);
    color: rgb(0, 0, 0);
    text-shadow: 2px 2px 5px #ffffff81;
    font-family: Offside;
@@ -26,6 +36,7 @@ body {
    letter-spacing: 8px;
    line-height: 75px;
    margin: 0px;
+   
 }
 
 img {
@@ -40,6 +51,7 @@ ul {
    list-style-type: none;
    margin: 0;
    padding: 0;
+   z-index: 1;
    height: 60px;
    overflow: hidden;
    background-color: #000000;
@@ -82,10 +94,13 @@ ul {
    bottom: 0%;
 }
 #home {
-   background-color: hsla(40, 100%, 50%, 0.74);
+   background: linear-gradient(to right, hsla(40, 100%, 50%, 0.5),hsla(40, 100%, 53%, 0.5),hsla(40, 100%, 71%, 0.5), hsla(40, 100%, 56%, 0.5)); 
+   backdrop-filter: blur(3px);
+   -webkit-backdrop-filter: blur(3px);
    width: 100%;
    text-align: left;
    display: flex;
+   pointer-events: none;
 }
 
 @media screen and (max-width: 768px) { 
