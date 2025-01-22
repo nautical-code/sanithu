@@ -33,5 +33,5 @@ rot = () => {
 hault = () => {
    shake = false;
    clearInterval(inter);
-   setMoveThreshold(threshold);
+   setMoveThreshold(10);
 }
