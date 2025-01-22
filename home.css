@@ -136,7 +136,21 @@ ul {
      letter-spacing: 4px;
      line-height: 25px;
    }
+   ul {
+    height: 50px;
+    font-size: 18px;
+   }
+   li {
+    height: 50px;
+    font-size: 18px;
+   }
+   li a {
+    height: 50px;
+    font-size: 18px;
+    padding: 0px 5px;
+   }
  }
+
 footer {
    background-color: #000000;
    color:#fff;
