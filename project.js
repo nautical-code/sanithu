@@ -28,7 +28,7 @@ function deviceMoved() {
   setTimeout(() => {
     clearInterval(inter); 
   }, 3000); 
-  setMoveThreshold(5);
+  setMoveThreshold(2);
 }
 
 function rot() {
