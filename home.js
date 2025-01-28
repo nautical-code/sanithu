@@ -27,6 +27,6 @@ var light = () => {
 }
 window.addEventListener('load', () => {
   window.scrollTo(0, 0);
-  setInterval(() => {document.getElementById("cover").style.display = "none"; document.getElementById("html").style.overflow = "visible"; document.getElementById("html").style.overflow = "visible";}, 100);
+  setInterval(() => {document.getElementById("cover").style.display = "none"; document.getElementById("html").style.overflow = "visible"; document.getElementById("html").style.overflow = "visible";}, 3000);
   
 });
