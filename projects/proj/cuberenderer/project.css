@@ -1,0 +1,11 @@
+body{
+   text-align: center;
+   padding: 1rem;
+   box-sizing: border-box;
+}
+html {
+   scroll-behavior: smooth;
+   cursor: url('../curse.png'), auto;
+   scrollbar-width: none;
+   overflow: hidden;
+}

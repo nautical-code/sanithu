@@ -1,0 +1,98 @@
+* {
+   box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  cursor: url('../curse.png'), auto;
+  scrollbar-width: none;
+  
+}
+html::-webkit-scrollbar { display: none; }
+body {
+   font-family: sans-serif;
+   background: linear-gradient(to right, rgba(68, 255, 0, 0.071), hsla(0, 0%, 0%, 0), rgba(0, 0, 0, 0), rgba(255, 187, 0, 0.104)); 
+   background-color: #0a0b1b;
+   color: #818080;
+   margin: 0;
+   font-family: Offside;
+ }
+ header {
+   text-align: center;
+   background-color: #000000;
+   padding: 1rem;
+ }
+ h1 {
+   margin-bottom: 10px;
+   color: #a0a0a0;
+ }
+ ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   z-index: 1;
+   height: 60px;
+   overflow: hidden;
+   background-color: #000000;
+   border-radius: 0px 0px 15px 15px;
+   position: -webkit-sticky;
+   position: sticky;
+   top: 0;
+ }
+ 
+ li {
+   float: left;
+   padding: 0;
+   border-radius: 15px;
+ }
+ 
+ li a {
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 0px 14px;
+   height: 60px;
+   text-decoration: none;
+   text-shadow: 2px 2px 5px #ffffff00;
+   height: fit-content;
+   border-radius: 15px;
+ }
+ .aban {
+   pointer-events: none;
+ }
+ .active:hover {
+   color: hsla(40, 100%, 50%, 0.74);
+   text-shadow: 0px 0px 5px hsla(40, 100%, 50%, 0.74);
+ }
+ li a:hover:not(.active) {
+   background-color: #ffffff;
+   color: #000000;
+ }
+ a {
+   font-family: Offside;
+ }
+ div {
+   padding-left: 10%;
+   padding-top: 10%;
+ }
+ button {
+   background-color: transparent; 
+   border: 2px solid #00ff08e0; /* Green border */
+   border-radius: 5px;
+   padding: 10px 20px;
+   color: #fff; /* White text */
+   cursor: pointer;
+   transition: border-color 0.3s ease-in-out;
+ }
+ 
+ button:hover {
+   border-color: #ffbb00e8; /* Orange on hover */
+ }
+ 
+ button a {
+   color: inherit; /* Inherit the button's color (white) */
+   text-decoration: none; /* Remove default underline */
+ }
+ 
+ .button-container {
+   margin-bottom: 15px; /* Space between button and description */
+ }
