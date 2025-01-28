@@ -5,7 +5,7 @@ body{
 }
 html {
    scroll-behavior: smooth;
-   cursor: url('../curse.png'), auto;
+   cursor: url('../../../curse.png'), auto;
    scrollbar-width: none;
    overflow: hidden;
 }
