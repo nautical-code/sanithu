@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Flappy Bird 🐥</title>
+        <script src="p5.js"></script>
+        <script src="BirdyNerdy.js"></script>
+        <link rel="favicon" src="favicon.png">
+    </head>
+    <body>
+        <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        overflow: hidden;
+        touch-action: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    canvas {
+        display: block;
+        image-rendering: pixelated; 
+    }
+
+    
+    @media (max-width: 900px), (pointer: coarse) {
+        body {
+            background-color: #000; 
+        }
+        canvas {
+           
+            width: 100vw !important;
+            height: 100vh !important;
+            border: none !important;
+        }
+    }
+</style>
+    
+    </body>
+</html>
