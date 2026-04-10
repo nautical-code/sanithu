@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <style>
+        /* Ensures the container fills the screen vertically and centers contents */
+        html, body {
+            height: 100%;
+        }
+
+        /* Styling to enforce the approximate 3cm x 5cm size for the GIF.
+           We use 'max-width' to prevent distortion and 'object-fit' to maintain aspect ratio.
+           Note: Precise cm measurements are difficult online due to varying screen resolutions,
+           but these dimensions serve as a close approximation on average screens.
+        */
+        .custom-gif-container {
+            width: 250px;  /* Approximately 3cm width at 96dpi */
+            height: 190px; /* Approximately 5cm height at 96dpi */
+            border: 2px solid #dee2e6; /* Optional border for definition */
+            padding: 5px;
+            background-color: #fff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .custom-gif-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Keeps the GIF from being stretched */
+        }
+    </style>
+</head>
+<body class="bg-light text-dark d-flex flex-column justify-content-center align-items-center">
+
+    <div class="container text-center py-5">
+        <h1 class="display-1 fw-bold text-danger">404</h1>
+        <h2 class="mb-4">Oops! We can't find that page.</h2>
+
+        <div class="d-flex justify-content-center mb-4">
+            <div class="custom-gif-container shadow-sm">
+                <img src="caramelldansen-gif-5.gif" alt="Lost GIF animation" />
+            </div>
+        </div>
+
+        <p class="lead mb-5">It seems the link you followed might be broken or the page has been moved. Don't worry, here's some music to help you through it.</p>
+        
+        <a href="/" class="btn btn-primary btn-lg px-4">Go Home</a>
+
+        <button id="playAudioBtn" class="btn btn-outline-secondary d-none mt-3" onclick="forcePlayAudio()">Enable Sound</button>
+    </div>
+
+    <audio id="backgroundAudio" autoplay>
+        <source src="Caramelldansen_(Speedy_Mix)_-_Caramell_(2).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const audio = document.getElementById('backgroundAudio');
+            const playButton = document.getElementById('playAudioBtn');
+
+            // Attempt to autoplay
+            const playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                    // Autoplay started successfully
+                    console.log("Autoplay started.");
+                }).catch(error => {
+                    // Autoplay was prevented by the browser (very likely)
+                    console.log("Autoplay was prevented. Showing play button.");
+                    // Unhide the 'Enable Sound' button
+                    playButton.classList.remove('d-none');
+                });
+            }
+        });
+
+        // Function called by the fallback button
+        function forcePlayAudio() {
+            const audio = document.getElementById('backgroundAudio');
+            const playButton = document.getElementById('playAudioBtn');
+            audio.play().then(() => {
+                // Audio is now playing, re-hide the button
+                playButton.classList.add('d-none');
+            });
+        }
+    </script>
+</body>
+</html>
