@@ -107,6 +107,6 @@ function pipe(){
 
 function hit(){
     if(((bird.xpos + 25 > pose) && (bird.xpos - 20 < pose + 20)) && ((bird.ypos - 18 < pipesDrw[0]) || (bird.ypos + 18 > pipesDrw[0] + 150))){
-        bird.stat = false;
+        bird.stat = true;
     }
 }
