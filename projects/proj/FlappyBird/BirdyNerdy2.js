@@ -3,7 +3,7 @@ let bird = {
     xvelocity: 5,
     totalFood: 0,
     totalDistance: 0,
-    gravity: 1,
+    gravity: 0.2,
     ypos: 200,
     xpos: 100,
     stat: true,
