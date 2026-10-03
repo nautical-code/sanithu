@@ -31,7 +31,7 @@ function draw(){
     fill( 255, 180, 200);
     rect(0, 0, windowWidth, 5);
     rect(0, windowHeight-5, windowWidth, 5);
-    bird.yvelocity = bird.gravity;
+    bird.yvelocity += bird.gravity;
     frameRate(20);
     flap();
     pipe();
