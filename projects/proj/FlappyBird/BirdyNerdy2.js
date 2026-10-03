@@ -90,7 +90,7 @@ function pipe(){
     if(pose < -20){
         pipePos = Math.random()*windowHeight;
         pipesDrw.shift();
-        pose = 250 + pose;
+        pose = 250;
     }
     // pipesDrw = [ 300, 400, 500, 200]; //this line is for error checking only
     let i = 0;
