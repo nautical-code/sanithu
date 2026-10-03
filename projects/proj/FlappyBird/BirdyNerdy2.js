@@ -71,13 +71,13 @@ function flap(){
         }
     }
     if(bird.ypos >= windowHeight - 26){
-        bird.stat = false;
+        bird.stat = true;
         bird.gravity = 0;
         bird.yvelocity = 0;
         bird.ypos = windowHeight - 26;
     }
     if(bird.ypos <= 40){
-        bird.stat = false;
+        bird.stat = true;
         bird.gravity = 2;
     }
 }
