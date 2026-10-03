@@ -71,13 +71,13 @@ function flap(){
         }
     }
     if(bird.ypos >= windowHeight - 26){
-        bird.stat = false;
+        bird.stat = true;
         bird.gravity = 0;
         bird.yvelocity = 0;
         bird.ypos = windowHeight - 26;
     }
     if(bird.ypos <= 40){
-        bird.stat = false;
+        bird.stat = true;
         bird.gravity = 2;
     }
 }
@@ -90,7 +90,7 @@ function pipe(){
     if(pose < -20){
         pipePos = Math.random()*windowHeight;
         pipesDrw.shift();
-        pose = 250;
+        pose = 250 + pose;
     }
     // pipesDrw = [ 300, 400, 500, 200]; //this line is for error checking only
     let i = 0;
@@ -107,6 +107,6 @@ function pipe(){
 
 function hit(){
     if(((bird.xpos + 25 > pose) && (bird.xpos - 20 < pose + 20)) && ((bird.ypos - 18 < pipesDrw[0]) || (bird.ypos + 18 > pipesDrw[0] + 150))){
-        bird.stat = false;
+        bird.stat = true;
     }
 }
