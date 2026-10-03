@@ -98,7 +98,7 @@ function pipe(){
         
         fill( 20, 100, 60);
         rect(pose + i * 250, 0, 20, elem);
-        rect(pose + i * 250, elem + 150, 20, windowHeight - elem - 150);
+        rect(pose + i * 250, elem + 250, 20, windowHeight - elem - 250);
         i++;
         if(frameCount % 1000 == 0){console.log(pose + i * 80, "/t:" , elem)}; // for dev people only.😉
     })
@@ -106,7 +106,7 @@ function pipe(){
 }
 
 function hit(){
-    if(((bird.xpos + 25 > pose) && (bird.xpos - 20 < pose + 20)) && ((bird.ypos - 18 < pipesDrw[0]) || (bird.ypos + 18 > pipesDrw[0] + 150))){
+    if(((bird.xpos + 25 > pose) && (bird.xpos - 20 < pose + 20)) && ((bird.ypos - 18 < pipesDrw[0]) || (bird.ypos + 18 > pipesDrw[0] + 250))){
         bird.stat = false;
     }
 }
