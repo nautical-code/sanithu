@@ -71,13 +71,13 @@ function flap(){
         }
     }
     if(bird.ypos >= windowHeight - 26){
-        bird.stat = true;
+        bird.stat = false;
         bird.gravity = 0;
         bird.yvelocity = 0;
         bird.ypos = windowHeight - 26;
     }
     if(bird.ypos <= 40){
-        bird.stat = true;
+        bird.stat = false;
         bird.gravity = 2;
     }
 }
@@ -107,6 +107,6 @@ function pipe(){
 
 function hit(){
     if(((bird.xpos + 25 > pose) && (bird.xpos - 20 < pose + 20)) && ((bird.ypos - 18 < pipesDrw[0]) || (bird.ypos + 18 > pipesDrw[0] + 150))){
-        bird.stat = true;
+        bird.stat = false;
     }
 }
